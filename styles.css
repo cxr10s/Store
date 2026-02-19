@@ -1207,7 +1207,7 @@ html {
 .total {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #B0A154;
     border-top: 1px solid #333;
     padding-top: 0.5rem;
     margin-top: 1rem;
@@ -1388,7 +1388,7 @@ html {
     position: relative;
 }
 .gift-info {
-    color: #1a1a1a;
+    color: #B0A154;
     font-weight: 600;
     margin-top: 0.5rem;
 }
