@@ -158,7 +158,7 @@ img {
 
 /* Header */
 .header {
-    background: #000;
+    background: linear-gradient(135deg, #1e1e42 0%, #1a2756 100%);
     position: fixed;
     top: 0;
     width: 100%;
@@ -275,7 +275,7 @@ img {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: #000;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -952,7 +952,7 @@ img {
     #deportes .products-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
-        padding: 3rem 1rem;
+        padding: 3rem 3rem;
     }
     .product-card.large {
         padding: 1rem;
