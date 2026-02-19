@@ -950,7 +950,7 @@ img {
     }
     /* Deportes (Equipos Deportivos) */
     #deportes .products-grid {
-        /*grid-template-columns: 1fr;*/
+        grid-template-columns: 10fr;
         gap: 1rem;
     }
     .product-card.large {
