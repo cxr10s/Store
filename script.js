@@ -1337,9 +1337,9 @@ function submitReservation(event) {
         return;
     }
     // Construir mensaje para WhatsApp
-    const customerBlock = `Nombre: 👤 ${name}\nTeléfono 📞: ${phone}\nEmail 📧: ${email}\nDirección: ${address}` + (notes ? `\nNotas: ${notes}` : '');
+    const customerBlock = `Nombre 👤  :  ${name}\nTeléfono 📱  : ${phone}\nEmail 📧  :  ${email}\nDirección 📍 :  ${address}` + (notes ? `\nNotas :  ${notes}` : '');
     const productsBlock = buildCartLinesForMessage();
-    const message = `Hola, quiero reservar mis productos.\n\n${customerBlock}\n\nProductos seleccionados:\n${productsBlock}\n\nTotal: $${cartTotal.toLocaleString()} COP`;
+    const message = `Quiero reservar estos productos.\n\n${customerBlock}\n\nProductos seleccionados:\n${productsBlock}\n\nTotal: $${cartTotal.toLocaleString()} COP`;
     tryOpenWhatsApp(message);
 }
 // Vincular el formulario de reserva con la función
