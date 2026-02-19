@@ -376,7 +376,7 @@ img {
 }
 
 .products-section.featured {
-    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+    background: #000;
 }
 
 .section-header {
@@ -519,7 +519,7 @@ img {
 /* Sports Section */
 .sports-section {
     padding: 5rem 2rem;
-    background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+    background: #000;
 }
 
 .sports-banner {
