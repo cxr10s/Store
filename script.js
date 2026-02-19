@@ -1056,7 +1056,7 @@ function enableAllGifts() {
         if (button) {
             button.disabled = false;
             button.textContent = 'Agregar al Carrito';
-            button.style.background = 'linear-gradient(45deg, #FF0066, #00CCFF)';
+            button.style.background = ' #00CCFF ';
             button.style.cursor = 'pointer';
         }
         
@@ -1337,7 +1337,7 @@ function submitReservation(event) {
         return;
     }
     // Construir mensaje para WhatsApp
-    const customerBlock = `Nombre 👤  :  ${name}\nTeléfono 📱  : ${phone}\nEmail 📧  :  ${email}\nDirección 📍 :  ${address}` + (notes ? `\nNotas :  ${notes}` : '');
+    const customerBlock = `Nombre 👤  :  ${name}\nTeléfono 📱  : ${phone}\nEmail  📧  :  ${email}\nDirección 📍 :  ${address}` + (notes ? `\nNotas :  ${notes}` : '');
     const productsBlock = buildCartLinesForMessage();
     const message = `Quiero reservar estos productos.\n\n${customerBlock}\n\nProductos seleccionados:\n${productsBlock}\n\nTotal: $${cartTotal.toLocaleString()} COP`;
     tryOpenWhatsApp(message);

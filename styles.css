@@ -275,7 +275,7 @@ img {
 
 /* Hero Section */
 .hero {
-    background: #000;
+    background: #1a1a1a;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -372,11 +372,11 @@ img {
 /* Products Sections */
 .products-section {
     padding: 5rem 2rem;
-    background: #000;
+    background: #1a1a1a;
 }
 
 .products-section.featured {
-    background: #000;
+    background: #1a1a1a;
 }
 
 .section-header {
@@ -519,7 +519,7 @@ img {
 /* Sports Section */
 .sports-section {
     padding: 5rem 2rem;
-    background: #000;
+    background: #1a1a1a;
 }
 
 .sports-banner {
@@ -1071,11 +1071,10 @@ html {
     right: -400px;
     width: 400px;
     height: 100vh;
-    background: linear-gradient(135deg, #0099CC 0%, #004080 100%);
+    background: #917771;
     color: #fff;
     z-index: 10000;
     transition: right 0.3s ease;
-    box-shadow: -5px 0 20px rgba(0, 102, 204, 0.3);
 }
 
 .cart-sidebar.open {
@@ -1208,7 +1207,7 @@ html {
 .total {
     font-size: 1.2rem;
     font-weight: 700;
-    color: green;
+    color: #1a1a1a;
     border-top: 1px solid #333;
     padding-top: 0.5rem;
     margin-top: 1rem;
@@ -1389,7 +1388,7 @@ html {
     position: relative;
 }
 .gift-info {
-    color: green;
+    color: #1a1a1a;
     font-weight: 600;
     margin-top: 0.5rem;
 }
