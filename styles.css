@@ -952,7 +952,7 @@ img {
     #deportes .products-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
-        padding: 0.6rem 1rem;
+        padding: 3rem 1rem;
     }
     .product-card.large {
         padding: 1rem;
