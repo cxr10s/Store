@@ -158,7 +158,7 @@ img {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, #1e1e42 0%, #1a2756 100%);
+    background: #000;
     position: fixed;
     top: 0;
     width: 100%;
