@@ -1152,7 +1152,7 @@ function getCatalogProducts(category) {
             { id: 'jeans-cat-7', name: 'Jeans Modernos', price: 80000, image: 'Jeans moderno ll.png' },
         ],
         'cascos': [
-            { id: 'casco-cat-1', name: 'Casco Moto croos', price: 300000, image: 'Cross azul.png' },
+            { id: 'casco-cat-1', name: 'Casco Moto croos', price: 300000, image: 'cross azul.png' },
             { id: 'casco-cat-2', name: 'Casco Motocicleta', price: 300000, image: 'rojo.png' },
             { id: 'casco-cat-3', name: 'Casco Carreras', price: 230000, image: 'Casco Racing l.png' },
             { id: 'casco-cat-4', name: 'Casco Carreras ll', price: 200000, image: 'Casco Racing ll.png' },
