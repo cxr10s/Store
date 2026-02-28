@@ -8,10 +8,10 @@
     <meta name="keywords" content="tienda deportiva, ropa deportiva, camisetas adidas, tenis deportivos, cascos ciclismo, accesorios deportivos">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Tienda Deportiva">
-    <meta property="og:description" content="Dale un click y visita nuestro inventario.">
+    <!--<meta property="og:description" content="Dale un click y visita nuestro inventario.">-->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://cxr10s.github.io/Store/">
-    <link rel="canonical" href="https://cxr10s.github.io/Store/">
+    <meta property="og:url" content="https://cxr10s.github.io/STORE2/">
+    <link rel="canonical" href="https://cxr10s.github.io/STORE2/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -54,9 +54,9 @@
             <div class="hero-text">
                 <h2>NUESTRO INVENTARIO</h2>
                 <h3>Moda Para Ti.</h3>
-                <p>Bienvenido, aqui encontraras productos deportivos de primera calidad. Estos productos son Camisetas, Tenis, Jeans y Accesorios  </p>
-                <p>En el final de la web encontraras las redes. </p>
+                <p>Bienvenido, aqui encontraras productos de calidad.  Como lo son las Camisetas, Tenis, Jeans y Accesorios  </p>
                 <button class="btn-primary">Ver Más</button>
+                <p></p>
                 <img src="bici-removebg-preview.png" alt="" class="bike-image">
             </div>
         </div>
@@ -350,7 +350,7 @@
                 <p>Subtotal: <span id="cart-subtotal">$0 COP</span></p>
                 <p class="discount-info" id="discount-info" style="display: none;">Descuento aplicado:  <span id="discount-amount">$0 COP</span></p>
                 <p class="shipping-info" id="shipping-info">Envío:  <span id="shipping-amount">$15.000 COP</span></p>
-                <p class="gift-info" id="gift-info" style="display: none;"> Regalo incluido </p>
+                <p class="gift-info" id="gift-info" style="display: none; color: #917771;"> Regalo incluido </p>
                 <p> Descuento a partir de $199.000 COP </p>
                 <p class="total">Total: <span id="cart-total">$0 COP</span></p>
             </div>
@@ -406,26 +406,26 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="reservation-name">Nombre Completo</label>
-                                <input type="text" id="reservation-name" pattern="[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+" title="Solo se permiten letras y espacios" required>
+                                <input type="text" id="reservation-name" pattern="[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+" title="Solo se permiten letras y espacios" required style="background-color: #DED7D7;">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="reservation-phone">Teléfono</label>
-                                <input type="tel" id="reservation-phone" placeholder="3001234567" maxlength="10" pattern="[0-9]{10}" required>
+                                <input type="tel" id="reservation-phone" placeholder="3001234567" maxlength="10" pattern="[0-9]{10}" required style="background-color: #DED7D7;">
                             </div>
                             <div class="form-group">
                                 <label for="reservation-email">Correo electrónico</label>
-                                <input type="email" id="reservation-email" required inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" pattern="^[a-z0-9._%+-]+@(gmail\.com|udi\.edu\.co|hotmail\.com)$" title="Usa un correo válido en minúsculas que termine en @gmail.com, @udi.edu.co o @hotmail.com">
+                                <input type="email" id="reservation-email" required inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" pattern="^[a-z0-9._%+-]+@(gmail\.com|udi\.edu\.co|hotmail\.com)$" title="Usa un correo válido en minúsculas que termine en @gmail.com, @udi.edu.co o @hotmail.com" style="background-color: #DED7D7;">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="reservation-address">Dirección de Entrega</label>
-                            <input type="text" id="reservation-address" required placeholder="Ej: Calle 10 # 12 - 34, Apto 201" title="Debe contener 'Calle' o 'Carrera' con número y un '#' seguido de número. Ej: Calle 10 # 12 - 34">
+                            <input type="text" id="reservation-address" required placeholder="Ej: Calle 10 # 12 - 34, Apto 201" title="Debe contener 'Calle' o 'Carrera' con número y un '#' seguido de número. Ej: Calle 10 # 12 - 34" style="background-color: #DED7D7;">
                         </div>
                         <div class="form-group">
                             <label for="reservation-notes">Notas adicionales (opcional)</label>
-                            <textarea id="reservation-notes" rows="2"></textarea>
+                            <textarea id="reservation-notes" rows="2" style="background-color: #DED7D7;"></textarea>
                         </div>
                         <button type="submit" class="btn-primary payment-submit">Realizar Pedido</button>
                         
