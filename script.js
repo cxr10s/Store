@@ -1263,28 +1263,11 @@ function closeReservationModal() {
 }
 
 function buildCartLinesForMessage() {
-    const lines = cart.map(item => {
+    // Solo productos, sin mensajes extra
+    return cart.map(item => {
         const lineTotal = item.price * item.quantity;
         return `- ${item.name} x${item.quantity} - $${lineTotal.toLocaleString()} COP`;
-    });
-    // Agregar detalle de descuento si aplica
-    const computedSubtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    let computedDiscount = 0;
-    if (computedSubtotal >= 199000) {
-        computedDiscount = 35000;
-    } else if (computedSubtotal >= 300000) {
-        computedDiscount = computedSubtotal * 0.05;
-    }
-    if (computedDiscount > 0) {
-        lines.push(`Descuento aplicado: $${computedDiscount.toLocaleString()} COP`);
-    }
-    // Agregar regalo(s) si existen
-    const gifts = cart.filter(i => i.isGift === true);
-    if (gifts.length > 0) {
-        const giftNames = gifts.map(g => g.name.replace(' (REGALO)', '')).join(', ');
-        lines.push(`Regalo incluido: ${giftNames}`);
-    }
-    return lines.join('\n');
+    }).join('\n');
 }
 
 // Funciones de validación
@@ -1314,7 +1297,9 @@ function submitReservation(event) {
         return;
     }
     // Obtener datos del formulario según los IDs del HTML
-    const name = document.getElementById('reservation-name').value.trim();
+    let name = document.getElementById('reservation-name').value.trim();
+    // Formatear el nombre: primera letra de cada palabra en mayúscula
+    name = name.split(' ').filter(Boolean).map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
     const phone = document.getElementById('reservation-phone').value.trim();
     const email = document.getElementById('reservation-email').value.trim();
     const address = document.getElementById('reservation-address').value.trim();
@@ -1339,7 +1324,23 @@ function submitReservation(event) {
     // Construir mensaje para WhatsApp
     const customerBlock = `Nombre 👤  :  ${name}\nTeléfono 📱  : ${phone}\nEmail  📧  :  ${email}\nDirección 📍 :  ${address}` + (notes ? `\nNotas :  ${notes}` : '');
     const productsBlock = buildCartLinesForMessage();
-    const message = `Quiero reservar estos productos.\n\n${customerBlock}\n\nProductos seleccionados:\n${productsBlock}\n\nTotal: $${cartTotal.toLocaleString()} COP`;
+    // Calcular subtotal, descuento y envío igual que en el carrito
+    let subtotal = 0;
+    cart.forEach(item => {
+        subtotal += item.price * item.quantity;
+    });
+    let discount = 0;
+    if (subtotal >= 199000) {
+        discount = 35000;
+    } else if (subtotal >= 300000) {
+        discount = subtotal * 0.05;
+    }
+    let shippingCost = 0;
+    if (subtotal > 0 && subtotal < 150000) {
+        shippingCost = 25000;
+    }
+    // El total ya está calculado en cartTotal
+    const message = `Quiero reservar estos productos.\n\n${customerBlock}\n\nProductos seleccionados:\n${productsBlock}\n\nEnvío: $${shippingCost.toLocaleString()} COP\nDescuento aplicado: $${discount.toLocaleString()} COP\nTotal: $${cartTotal.toLocaleString()} COP`;
     tryOpenWhatsApp(message);
 }
 // Vincular el formulario de reserva con la función
