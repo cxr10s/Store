@@ -186,7 +186,7 @@ img {
     gap: 1rem;
     box-shadow: 0 10px 30px #888;
     animation: anime 1s ease forwards;
-    z-index: 1001;
+    z-index: 500;
 }
 @keyframes anime {
     from {
@@ -1733,13 +1733,23 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 10000;
-    display: none;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.35s ease, background 0.35s ease, backdrop-filter 0.35s ease;
+    pointer-events: none;
 }
 
 .modal-overlay.show {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    pointer-events: auto;
 }
 
 .modal-content {

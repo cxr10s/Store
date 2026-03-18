@@ -1014,9 +1014,13 @@ function showCatalog(category) {
         `;
         grid.appendChild(item);
     });
-    
+
+    // Limpiar estilos inline que puedan interferir
+    overlay.removeAttribute('style');
+
     modal.classList.add('show');
     overlay.classList.add('show');
+    document.body.classList.add('modal-open');
 }
 
 function closeCatalogModal() {
@@ -1026,6 +1030,7 @@ function closeCatalogModal() {
     if (modal && overlay) {
         modal.classList.remove('show');
         overlay.classList.remove('show');
+        document.body.classList.remove('modal-open');
     }
 }
 
